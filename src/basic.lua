@@ -9,10 +9,6 @@ function _M.serialize(ngx, req_body)
     }
   end
 
-  -- read the request body
-  req_read_body()
-  local body = req_get_body_data()
-
   return {
     request = {
       uri = ngx.var.request_uri,
