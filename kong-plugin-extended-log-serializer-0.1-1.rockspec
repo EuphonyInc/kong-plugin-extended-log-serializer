@@ -21,7 +21,6 @@ dependencies = {
 build = {
   type = "builtin",
   modules = {
-    ["kong.plugins.extended-log-serializer.handler"] = "src/handler.lua",
-    ["kong.plugins.extended-log-serializer.schema"] = "src/schema.lua"
+    ["kong.plugins.extended-log-serializer.basic"] = "src/handler.lua",
   }
 }
