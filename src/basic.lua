@@ -1,8 +1,6 @@
-local req_read_body = ngx.req.read_body
-local req_get_body_data = ngx.req.get_body_data
 local _M = {}
 
-function _M.serialize(ngx)
+function _M.serialize(ngx, req_body)
   local authenticated_entity
   if ngx.ctx.authenticated_credential ~= nil then
     authenticated_entity = {
@@ -23,7 +21,7 @@ function _M.serialize(ngx)
       method = ngx.req.get_method(), -- http method
       headers = ngx.req.get_headers(),
       size = ngx.var.request_length,
-      body = body
+      body = req_body
     },
     response = {
       status = ngx.status,
