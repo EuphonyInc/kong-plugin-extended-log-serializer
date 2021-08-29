@@ -3,7 +3,7 @@ version = "0.1-1"
 supported_platforms = {"linux", "macosx"}
 source = {
   url = "git://github.com/peterbsmith2/kong-plugin-extended-log-serializer",
-  tag = "v0.1-1"
+  tag = "master"
 }
 description = {
   summary = "The Extended Log Serializer Plugin",
@@ -21,6 +21,6 @@ dependencies = {
 build = {
   type = "builtin",
   modules = {
-    ["kong.plugins.extended-log-serializer.basic"] = "src/basic.lua",
+    ["kong.plugins.kong-plugin-extended-log-serializer.basic"] = "src/basic.lua",
   }
 }
